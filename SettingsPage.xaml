@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="SimpleTipCalc.SettingsPage"
+             Title="Settings">
+   
+    <StackLayout Padding="24,24,24,24" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
+        <StackLayout Orientation="Horizontal" HorizontalOptions="Fill">
+            <Label Text="Round Total" HorizontalOptions="Start" VerticalOptions="Center" FontAttributes="Bold"/>
+            <Switch HorizontalOptions="EndAndExpand" IsToggled="{Binding RoundTotal}"/>
+        </StackLayout>
+
+        <Label Text="Always increase the amount of the tip to make the final bill total a flat amount" />
+        <BoxView Color="Black" HeightRequest="1" Opacity="0.12" />
+
+        <StackLayout Orientation="Horizontal" HorizontalOptions="Fill">
+            <Label Text="Default Tip Percentage" FontAttributes="Bold" VerticalOptions="Center" />
+            <Entry Text="{Binding DefaultTip}" Placeholder="20" HorizontalOptions="EndAndExpand" Keyboard="Numeric"/>
+        </StackLayout>
+
+        <BoxView Color="Black" HeightRequest="1" Opacity="0.12" />
+
+        <StackLayout VerticalOptions="End" >
+            <Label Text="https://icons8.com" VerticalOptions="Center" HorizontalOptions="Start" >
+                <Label.GestureRecognizers>
+                    <TapGestureRecognizer Tapped="IconURL_Clicked" ></TapGestureRecognizer>
+                </Label.GestureRecognizers>
+            </Label>
+        </StackLayout>
+
+
+    </StackLayout>
+</ContentPage>

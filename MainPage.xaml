@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:SimpleTipCalc"
+             x:Class="SimpleTipCalc.MainPage"
+             Title="Simple Tip Calculator" >
+    
+    <ContentPage.ToolbarItems>
+     <ToolbarItem Icon="settings.png" Activated="ToolbarItem_Activated" />
+    </ContentPage.ToolbarItems>
+
+    <StackLayout Padding="24,24,24,24" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
+        <StackLayout HorizontalOptions="Fill">
+            <Label Text="Bill subtotal" VerticalOptions="Center"/>
+            <Entry Keyboard="Numeric" Placeholder="$" HorizontalOptions="FillAndExpand" TextChanged="BillEntry_TextChanged" x:Name="BillSubTotal"/>
+        </StackLayout>
+        
+        <StackLayout>
+            <Label Text="Percent to tip" VerticalOptions="Center" />
+            <Entry Keyboard="Numeric" Placeholder="%" HorizontalOptions="FillAndExpand" TextChanged="TipPercent_TextChanged" x:Name="TipPercent"/>
+        </StackLayout>
+
+        <StackLayout>
+            <Label Text="Tip amount" FontSize="Large" />
+            <Label x:Name="AmountToTip" FontSize="Large" />
+            <Label Text="Total bill" FontSize="Large"/>
+            <Label x:Name="TotalBillAmount" FontSize="Large" />
+        </StackLayout>
+    </StackLayout>
+             
+</ContentPage>
