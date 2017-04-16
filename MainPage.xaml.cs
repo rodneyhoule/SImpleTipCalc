@@ -24,22 +24,9 @@ namespace SimpleTipCalc
             await Navigation.PushAsync(new SettingsPage());
         }
 
-        private void BillEntry_TextChanged(object sender, TextChangedEventArgs e)
+        private void Entry_TextChanged(object sender, TextChangedEventArgs e)
         {
             // Calculate the tip if entry for Tip Amount and Bill subtotal are NOT null
-            if (!String.IsNullOrWhiteSpace(BillSubTotal.Text) && !String.IsNullOrWhiteSpace(TipPercent.Text))
-            {
-                CalculateTip();
-            }
-            else
-            {
-                AmountToTip.Text = "";
-                TotalBillAmount.Text = "";
-            }
-        }
-
-        private void TipPercent_TextChanged(object sender, TextChangedEventArgs e)
-        {
             if (!String.IsNullOrWhiteSpace(BillSubTotal.Text) && !String.IsNullOrWhiteSpace(TipPercent.Text))
             {
                 CalculateTip();

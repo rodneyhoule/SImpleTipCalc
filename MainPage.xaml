@@ -12,12 +12,12 @@
     <StackLayout Padding="24,24,24,24" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
         <StackLayout HorizontalOptions="Fill">
             <Label Text="Bill subtotal" VerticalOptions="Center"/>
-            <Entry Keyboard="Numeric" Placeholder="$" HorizontalOptions="FillAndExpand" TextChanged="BillEntry_TextChanged" x:Name="BillSubTotal"/>
+            <Entry Keyboard="Numeric" Placeholder="$" HorizontalOptions="FillAndExpand" TextChanged="Entry_TextChanged" x:Name="BillSubTotal"/>
         </StackLayout>
         
         <StackLayout>
             <Label Text="Percent to tip" VerticalOptions="Center" />
-            <Entry Keyboard="Numeric" Placeholder="%" HorizontalOptions="FillAndExpand" TextChanged="TipPercent_TextChanged" x:Name="TipPercent"/>
+            <Entry Keyboard="Numeric" Placeholder="%" HorizontalOptions="FillAndExpand" TextChanged="Entry_TextChanged" x:Name="TipPercent"/>
         </StackLayout>
 
         <StackLayout>
